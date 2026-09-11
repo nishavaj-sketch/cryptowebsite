@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Crypto Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+
+<body class = "home_page">
+<div class = "home_container">
+  <h1>Crypto Dashboard</h1>
+
+        <p>Track cryptocurrency prices and market charts</p>
+
+        <div class="navigation-buttons">
+
+            <a href="{{ url_for('coins') }}" class="nav-button">
+                View Crypto Table</a>
+
+  <a href="{{ url_for('markets') }}" class="nav-button">view bitcoin chart</a>
+
+  <a href="{{ url_for('asset_platform') }}" class="nav-button">
+    View Asset Platform
+  </a>
+
+
+        </div>
+</div>
+
+
+
+</body>
+
+</html>
+
+
+

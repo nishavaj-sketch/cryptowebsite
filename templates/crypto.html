@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crypto</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+    <style>
+        body {
+            background-color: #0f172a;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .dashboard {
+
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Crypto chart</h1>
+
+    <div class="dashboard">
+
+        {{ chart | safe }}
+
+    </div>
+<a href="/">Back to Crypto Prices</a>
+
+</body>
+</html>
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crypto</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+<div class="crypto-container">
+
+    <table class = "crypto-table">
+    <thead>
+    <tr>
+        <th scope = "col">CURRENCY_ID</th>
+        <th scope = "col">CURRENCY_NAME</th>
+        <th scope = "col">CURRENCY_SYMBOL</th>
+        <th scope = "col">CURRENT_VALUE</th>
+
+    </tr>
+   </thead>
+
+   <tbody id="crypto-table-body">
+
+            {% for curr in currency %}
+            <tr>
+                <td>{{ curr.id }}</td>
+                <td>{{ curr.name }}</td>
+                <td>{{ curr.symbol }}</td>
+                <td>${{ curr.current_price }}</td>
+            </tr>
+            {% endfor %}
+
+   </tbody>
+    </table>
+ <br>
+
+    <a href="/">View Bitcoin Chart</a>
+
+</div>
+
+
+</body>
+</html>
+
+

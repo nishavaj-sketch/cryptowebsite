@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>asset platform</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+<div class="crypto-container">
+
+    <table class = "crypto-table">
+
+    <thead>
+    <tr>
+        <th scope = "col">ID</th>
+        <th scope = "col">CHAIN IDENTIFIER</th>
+        <th scope = "col">NAME</th>
+        <th scope = "col">SHORTNAME</th>
+        <th scope = "col">NATIVE-COIN-ID</th>
+        <th scope = "col">IMAGE</th>
+
+    </tr>
+   </thead>
+
+   <tbody id="crypto-table-body">
+     {% for item in asset %}
+          <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.chain_identifier }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.shortname }}</td>
+            <td>{{ item.native_coin_id }}</td>
+            <td>{{ item.image.thumb }}</td>
+
+          </tr>
+     {% endfor %}
+   </tbody>
+    </table>
+
+        <br>
+
+        <a href="/">Go Back</a>
+
+    </div>
+
+</body>
+</html>
+
